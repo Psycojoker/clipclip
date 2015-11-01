@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
+import os
+import sys
+
+
+def main():
+    if not os.path.exists("_content"):
+        print("Everything should be in a '_content' directory, I can't find any, stop.")
+        sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()
