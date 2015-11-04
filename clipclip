@@ -6,9 +6,16 @@ import sys
 
 
 def main():
+    collected_data = {
+        "layout": {},
+    }
+
     if not os.path.exists("_content"):
         print("Everything should be in a '_content' directory, I can't find any, stop.")
         sys.exit(1)
+
+    if os.path.exists("_layout"):
+        collected_data["layout"] = {x: open(x, "r").read() for x in os.listdir("_layout")}
 
 
 if __name__ == '__main__':
